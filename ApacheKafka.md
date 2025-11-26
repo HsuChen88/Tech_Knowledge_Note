@@ -1,5 +1,9 @@
 # ⚡ Apache Kafka
 
+系統效能遇到瓶頸了嗎？ 想要每秒處理數十億筆事件，Kafka 給你做 Big Data Streaming 滿滿的大平台。
+
+---
+
 :::spoiler 📚 目錄
 [TOC]
 :::
@@ -59,6 +63,16 @@ Inventory_svc → Inventory → Alert_svc → Restock → Inventory_Restock_svc
 ```
 
 ### ⏱️ Real-Time Streams Processing
+**Kafka Streams** 是 Kafka 官方的 stream processing library。
+* 它不只是 **讀 Topics** ，而是能對事件做 **轉換、聚合、join、window 等運算**，再輸出結果到新的 topic。
+* 所以 Kafka Streams 是基於 Kafka Pub/Sub 架構實作的 **上層應用框架**，不是新的概念或不同類型的 topic。
+
+> 換句話說：
+>
+> **Topic 是資料儲存與傳遞的基礎單位，Streams 是處理這些資料的方式。**
+
+---
+
 :::info 💡
 Use **Kafka Streams** API
 > **Kafka Streams** 是一個 Java Library，可以將 Kafka Topic 當成資料來源與輸出，進行即時運算與轉換。
@@ -69,6 +83,8 @@ Use **[Apache Flink](https://flink.apache.org/)**
 > 可以搭配的 Processing 工具
 
 :::
+
+---
 
 Event Stream 會被持續紀錄，Consumer 不需要 Request 就可以直接收到 
 ![image](https://hackmd.io/_uploads/SkNBbGcHeg.png)
